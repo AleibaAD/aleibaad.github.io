@@ -109,26 +109,35 @@
             opacity: 1;
         }
 
-        .slideshow-controls {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .slideshow-btn {
-            background: #f8f9fa;
-            border: 1px solid #e9ecef;
-            border-radius: 4px;
-            padding: 8px 12px;
-            font-size: 0.8em;
+        .nav-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
             cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             transition: all 0.2s ease;
-            font-family: inherit;
+            opacity: 0.7;
         }
 
-        .slideshow-btn:hover {
-            background: #e9ecef;
+        .nav-arrow:hover {
+            background: rgba(255, 255, 255, 0.95);
+            opacity: 1;
+        }
+
+        .nav-arrow.left {
+            left: 8px;
+        }
+
+        .nav-arrow.right {
+            right: 8px;
         }
         
         .about-text {
@@ -262,11 +271,9 @@
                     <img src="profile.jpg" alt="Al-E-Iba Dahri" class="active">
                     <img src="pic2.jpg" alt="Al-E-Iba Dahri">
                     <img src="pic3.jpg" alt="Al-E-Iba Dahri">
-                    <!-- <img src="pic4.jpg" alt="Al-E-Iba Dahri"> -->
-                </div>
-                <div class="slideshow-controls">
-                    <button class="slideshow-btn" onclick="previousImage()">←</button>
-                    <button class="slideshow-btn" onclick="nextImage()">→</button>
+                   <!-- <img src="pic4.jpg" alt="Al-E-Iba Dahri"> -->
+                    <button class="nav-arrow left" onclick="previousImage()">‹</button>
+                    <button class="nav-arrow right" onclick="nextImage()">›</button>
                 </div>
                 <div class="about-text">
                     <h2>About</h2>
