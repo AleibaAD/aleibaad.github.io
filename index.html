@@ -4,144 +4,48 @@
     <meta charset="UTF-8">
     <title>Al-E-Iba Dahri</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+            font-family: "Helvetica Neue", Arial, sans-serif;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            line-height: 1.7;
-            color: #2c3e50;
-            font-weight: 400;
-            background-color: #fafafa;
+            line-height: 1.6;
+            color: #333;
         }
         
         header {
             text-align: center;
             margin-bottom: 40px;
-            padding: 30px 20px;
-            background: linear-gradient(to right, #002147, #003b75);
-            border-radius: 8px;
-            color: white;
-            box-shadow: 0 4px 12px rgba(0, 33, 71, 0.1);
         }
         
         header img {
             width: 150px;
             height: auto;
             margin-bottom: 15px;
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
         }
         
         nav {
             margin-bottom: 30px;
             text-align: center;
-            padding: 15px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
         
         nav a {
-            margin: 0 12px;
+            margin: 0 10px;
             text-decoration: none;
-            color: #002147;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            font-size: 1.05em;
-            transition: all 0.3s ease;
-            padding: 5px 10px;
-            border-radius: 4px;
-        }
-        
-        nav a:hover {
-            color: #0056b3;
-            background-color: #f0f7ff;
+            color: #0073e6;
         }
         
         h1, h2 {
-            color: #002147; /* Oxford Blue */
-            font-family: "Playfair Display", Georgia, serif;
-        }
-        
-        h1 {
-            font-weight: 600;
-            font-size: 2.4em;
-            margin-bottom: 5px;
-            letter-spacing: 0.5px;
-        }
-        
-        h2 {
-            font-weight: 600;
-            border-bottom: 2px solid #eaeaea;
-            padding-bottom: 12px;
-            margin-top: 30px;
-            padding-left: 5px;
+            color: #222;
         }
         
         section {
             margin-bottom: 40px;
-            padding: 25px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
         }
         
         a {
-            color: #0056b3;
-            transition: color 0.2s ease;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        a:hover {
-            color: #002147;
-            text-decoration: underline;
-        }
-        
-        strong {
-            color: #002147;
-            font-weight: 700;
-        }
-        
-        header p {
-        color: #001f3f; /* Darker, complementary color */
-        font-style: normal; /* Remove italic for better readability */
-        font-weight: 500; /* Slightly bolder */
-        font-size: 1.15em;
-        margin-top: 10px;
-        }
-        
-        ul {
-            padding-left: 20px;
-        }
-        
-        li {
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-        
-        /* Decorative elements */
-        .oxford-bar {
-            height: 4px;
-            background: linear-gradient(to right, #002147, #0056b3);
-            width: 60px;
-            margin: 15px auto 20px auto;
-            border-radius: 2px;
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 600px) {
-            nav a {
-                display: inline-block;
-                margin: 5px;
-            }
-            
-            h1 {
-                font-size: 2em;
-            }
+            color: #0073e6;
         }
     </style>
 </head>
@@ -150,15 +54,14 @@
         <!-- Add your picture here later -->
         <img src="profile.jpg" alt="Aleiba Asad">
         <h1>Al-E-Iba Dahri</h1>
-        <div class="oxford-bar"></div>
         <p>MSc Economics for Development, University of Oxford</p>
     </header>
     
     <nav>
-        <a href="#about">About</a> 
-        <a href="#research">Research</a> 
-        <a href="#projects">Projects</a> 
-        <a href="#cv">CV</a> 
+        <a href="#about">About</a> | 
+        <a href="#research">Research</a> | 
+        <a href="#projects">Projects</a> | 
+        <a href="#cv">CV</a> | 
         <a href="#contact">Contact</a>
     </nav>
     
@@ -178,7 +81,6 @@
         <h2>Projects</h2>
         <ul>
             <!-- Add projects here -->
-            <li>More research projects coming soon...</li>
         </ul>
     </section>
     
@@ -193,22 +95,5 @@
         <!-- <p>GitHub: <a href="https://github.com/aleibaad">github.com/aleibad</a></p> -->
         <p>LinkedIn: <a href="https://linkedin.com/in/adahri">linkedin.com/in/adahri</a></p>
     </section>
-    
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                window.scrollTo({
-                    top: targetElement.offsetTop - 20,
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>
