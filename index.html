@@ -5,49 +5,61 @@
     <title>Al-E-Iba Dahri</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .site-footer {
-            text-align: center;           /* Center the text */
-            padding: 15px 20px;           /* Add some space around the text */
-            background-color: #002147;    /* Dark Oxford Blue, matches your header/nav theme */
-            color: #ffffff;               /* White text */
-            border-top: 2px solid #0056b3; /* Optional: subtle top border for separation */
-            font-size: 0.9em;             /* Slightly smaller font */
-            margin-top: 40px;             /* Space above footer */
-            border-radius: 0 0 8px 8px;   /* Rounded bottom corners (optional) */
-        }
         body {
-            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-family: "Georgia", "Times New Roman", serif;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
             line-height: 1.6;
             color: #333;
+            background-color: white;
         }
         
-        header {
+        .header-section {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
         }
         
-        header img {
-            width: 150px;
-            height: auto;
-            margin-bottom: 15px;
+        .header-section h1 {
+            color: #1a1a1a;
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 400;
+            letter-spacing: -0.5px;
         }
         
-        nav {
-            margin-bottom: 30px;
+        .navigation {
             text-align: center;
+            margin: 20px 0 40px 0;
+            padding: 10px 0;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
         }
         
-        nav a {
-            margin: 0 10px;
+        .navigation a {
+            color: #1a73e8;
             text-decoration: none;
-            color: #0073e6;
+            font-weight: 400;
+            font-size: 0.95em;
+            margin: 0 15px;
+            transition: color 0.2s ease;
         }
         
-        h1, h2 {
-            color: #222;
+        .navigation a:hover {
+            color: #1557b0;
+            text-decoration: underline;
+        }
+        
+        .main-content {
+            margin-top: 30px;
+        }
+        
+        h2 {
+            color: #1a1a1a;
+            font-weight: 500;
+            font-size: 1.4em;
+            margin: 30px 0 15px 0;
         }
         
         section {
@@ -55,95 +67,184 @@
         }
         
         a {
-            color: #0073e6;
+            color: #1a73e8;
+            text-decoration: none;
         }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
         .about-container {
             display: flex;
-            align-items: center;
-            gap: 30px; /* space between image and text */
-            flex-wrap: wrap; /* makes it responsive */
+            align-items: flex-start;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
         }
         
         .about-image img {
-            width: 200px; /* adjust size as needed */
+            width: 200px;
             height: auto;
-            border-radius: 8px; /* optional rounded corners */
-            border: 2px solid #ddd; /* optional border */
+            border-radius: 4px;
         }
         
         .about-text {
-            flex: 1; /* text takes remaining space */
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-text p {
+            margin: 0;
+            font-size: 1em;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .subtitle {
+            color: #1a73e8;
+            font-size: 1.1em;
+            margin: 8px 0 0 0;
+            font-weight: 400;
+            text-align: center;
+        }
+        
+        ul {
+            padding-left: 0;
+            list-style: none;
+        }
+        
+        .site-footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 60px;
+            border-top: 1px solid #ddd;
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .contact-links {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: #f8f9fa;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #e9ecef;
+        }
+        
+        .contact-item:hover {
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+        
+        .contact-item .contact-label {
+            font-weight: 500;
+            font-size: 0.9em;
         }
         
         @media (max-width: 600px) {
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+            body {
+                padding: 15px;
+            }
+            
+            .header-section h1 {
+                font-size: 2em;
+            }
+            
+            .navigation a {
+                margin: 0 8px;
+                font-size: 0.9em;
+            }
+            
             .about-container {
-                flex-direction: column; /* stack on small screens */
+                flex-direction: column;
                 text-align: center;
             }
             
             .about-text {
-                margin-top: 15px;
+                margin-top: 20px;
+                min-width: auto;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <!-- Add your picture here later -->
-        <!--<img src="profile.jpg" alt="Aleiba Asad">-->
+    <header class="header-section">
         <h1>Al-E-Iba Dahri</h1>
-        <p>MSc Economics for Development, University of Oxford</p>
+        <p class="subtitle">MSc Economics for Development, University of Oxford</p>
     </header>
     
-    <nav>
-        <a href="#about">About</a> | 
-        <a href="#research">Research</a> | 
-        <a href="#projects">Projects</a> | 
-        <a href="#cv">CV</a> | 
+    <nav class="navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#cv">CV</a>
         <a href="#contact">Contact</a>
     </nav>
     
-   <!-- <section id="about">
-        <h2>About</h2>
-        <p>Development economics professional specializing in quantitative analysis and data-driven policy work across climate, education, health, and gender issues.</p>
-    </section>
+    <main class="main-content">
+        <section id="about">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="profile.jpg" alt="Al-E-Iba Dahri">
+                </div>
+                <div class="about-text">
+                    <p>Development economics professional specializing in quantitative analysis and data-driven policy work across climate, education, health, and gender issues.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <!-- Add projects here -->
+            </ul>
+        </section>
+        
+        <section id="cv">
+            <h2>CV</h2>
+            <p><a href="AleibaAsad_CV.pdf" target="_blank">Download my CV (PDF)</a></p>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-links">
+                <a href="mailto:aleiba97@hotmail.com" class="contact-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#D44638">
+                        <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.749L12 10.024l9.615-6.203h.749c.904 0 1.636.732 1.636 1.636Z"/>
+                    </svg>
+                    <span class="contact-label">Email</span>
+                </a>
+                
+                <a href="https://linkedin.com/in/adahri" class="contact-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#0077B5">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    <span class="contact-label">LinkedIn</span>
+                </a>
+            </div>
+        </section>
+    </main>
     
-    <section id="research">
-        <h2>Research</h2>
-        <ul>
-            <li><strong>Master's Dissertation (Oxford):</strong> Climate Shocks, Repeated Exposure and Adaptation: Evidence from Ethiopia (Awarded a Distinction Mark).</li>
-        </ul>
-    </section> -->
-    <section id="about" class="about-section">
-    <div class="about-container">
-        <div class="about-image">
-            <img src="profile.jpg" alt="Aleiba Asad">
-        </div>
-        <div class="about-text">
-            <h2>About</h2>
-            <p>Development economics professional specializing in quantitative analysis and data-driven policy work across climate, education, health, and gender issues.</p>
-        </div>
-    </div>
-</section>
-    
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <!-- Add projects here -->
-        </ul>
-    </section>
-    
-    <section id="cv">
-        <h2>CV</h2>
-        <p><a href="AleibaAsad_CV.pdf" target="_blank">Download my CV (PDF)</a></p>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:aleiba97@hotmail.com">aleiba97@hotmail.com</a></p>
-        <!-- <p>GitHub: <a href="https://github.com/aleibaad">github.com/aleibad</a></p> -->
-        <p>LinkedIn: <a href="https://linkedin.com/in/adahri">linkedin.com/in/adahri</a></p>
-    </section>
     <footer class="site-footer">
         <p>© Copyright 2025 - All Rights Reserved</p>
     </footer>
