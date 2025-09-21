@@ -75,13 +75,24 @@
             text-decoration: underline;
         }
         
-        .about-container {
+       .about-container {
             display: flex;
-            align-items: flex-start;
+            align-items: flex-start; /* keeps text aligned to top of image */
             gap: 30px;
-            flex-wrap: nowrap;
-            margin-top: 20px;
+            flex-wrap: nowrap;       /* ensure image and text stay in a row */
         }
+        
+        @media (max-width: 600px) {
+            .about-container {
+                flex-direction: column; /* stack vertically on small screens */
+                text-align: center;
+            }
+        
+            .about-text {
+                margin-top: 20px;
+            }
+        }
+
         
         .about-image img {
             width: 180px;
