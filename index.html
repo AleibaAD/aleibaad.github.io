@@ -117,6 +117,22 @@
             color: #555;
             margin-left: 10px;
         }
+
+        /* Education & Work section styling */
+        .edu-work-entry {
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+
+        .edu-work-title {
+            font-weight: 500;
+        }
+
+        .edu-work-subtitle {
+            font-style: italic;
+            color: #555;
+            margin-left: 10px;
+        }
         
         @media (max-width: 600px) {
             .about-container {
@@ -134,11 +150,6 @@
             margin: 8px 0 0 0;
             font-weight: 400;
             text-align: center;
-        }
-        
-        ul {
-            padding-left: 0;
-            list-style: none;
         }
         
         .site-footer {
@@ -201,8 +212,7 @@
     <nav class="navigation">
         <a href="#about">About</a>
         <a href="#research">Research</a>
-        <a href="#projects">Projects</a>
-        <a href="#cv">CV</a>
+        <a href="#edu-work">Education & Work</a>
         <a href="#contact">Contact</a>
     </nav>
     
@@ -224,22 +234,24 @@
             <div class="research-entry">
                 <div class="research-program">MSc Economics for Development, Oxford</div>
                 <div class="research-dissertation">Dissertation: Climate Shocks, Repeated Exposure and Adaptation: Evidence from Ethiopia</div>
-           <!-- Add abstract PDF link -->
-            <a href="abstract.pdf" target="_blank" style="margin-left: 10px; font-weight: 400; font-style: normal; color: #1a73e8; text-decoration: underline;">[Abstract]</a>
- 
+                <a href="abstract.pdf" target="_blank" style="margin-left: 10px; font-weight: 400; font-style: normal; color: #1a73e8; text-decoration: underline;">[Abstract]</a>
             </div>
         </section>
-        
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <!-- Add projects here -->
-            </ul>
-        </section>
-        
-        <section id="cv">
-            <h2>CV</h2>
-            <p><a href="AleibaAsad_CV.pdf" target="_blank">Download my CV (PDF)</a></p>
+
+        <section id="edu-work">
+            <h2>Education & Work Experience</h2>
+            <div class="edu-work-entry">
+                <div class="edu-work-title">MSc Economics for Development, University of Oxford</div>
+                <div class="edu-work-subtitle">(2024-25)</div>
+            </div>
+            <div class="edu-work-entry">
+                <div class="edu-work-title">Research Associate, Interactive Research and Development</div>
+                <div class="edu-work-subtitle">(2022-2024)</div>
+            </div>
+            <div class="edu-work-entry">
+                <div class="edu-work-title">BSc Economics and Mathematics, Lahore University of Management Sciences</div>
+                <div class="edu-work-subtitle">(2016-2020)</div>
+            </div>
         </section>
         
         <section id="contact">
@@ -267,3 +279,4 @@
     </footer>
 </body>
 </html>
+
