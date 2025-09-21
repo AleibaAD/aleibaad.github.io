@@ -2,599 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Al-E-Iba Dahri</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Al-E-Iba Dahri | Development Economist</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --accent: #e74c3c;
-            --light: #ecf0f1;
-            --dark: #2c3e50;
-            --text: #34495e;
-            --background: #ffffff;
-            --shadow: rgba(0, 0, 0, 0.1);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background-color: #f9f9f9;
-            scroll-behavior: smooth;
-        }
-        
-        .container {
-            max-width: 1100px;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header & Navigation */
-        header {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
-            background-size: cover;
-        }
-        
-        .profile-container {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            margin-bottom: 20px;
-            transition: transform 0.3s ease;
-        }
-        
-        .profile-img:hover {
-            transform: scale(1.03);
-        }
-        
-        .header-content h1 {
-            font-size: 2.8rem;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-        
-        .header-content p {
-            font-size: 1.4rem;
-            opacity: 0.9;
-            margin-bottom: 20px;
-        }
-        
-        .university {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        
-        /* Navigation */
-        nav {
-            background-color: white;
-            box-shadow: 0 2px 15px var(--shadow);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .nav-container {
-            display: flex;
-            justify-content: center;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-        
-        .nav-links li {
-            padding: 0;
-        }
-        
-        .nav-links a {
-            display: block;
-            padding: 20px 25px;
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-        
-        .nav-links a:hover {
-            color: var(--secondary);
-        }
-        
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 3px;
-            background: var(--secondary);
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-        
-        .nav-links a:hover::after {
-            width: 80%;
-        }
-        
-        /* Sections */
-        section {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-            position: relative;
-        }
-        
-        .section-title h2 {
-            font-size: 2.2rem;
-            color: var(--primary);
-            display: inline-block;
-            padding-bottom: 10px;
-            position: relative;
-        }
-        
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: var(--secondary);
-        }
-        
-        .section-content {
-            background: white;
-            border-radius: 10px;
-            padding: 40px;
-            box-shadow: 0 5px 20px var(--shadow);
-            margin-bottom: 30px;
-        }
-        
-        /* About Section */
-        #about {
-            background-color: var(--light);
-        }
-        
-        .about-content {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        
-        .about-content p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-        
-        /* Research Section */
-        .research-item {
-            margin-bottom: 30px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .research-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        
-        .research-item h3 {
-            color: var(--primary);
-            margin-bottom: 10px;
-            font-size: 1.4rem;
-        }
-        
-        .research-item p {
-            line-height: 1.7;
-            color: #555;
-        }
-        
-        .badge {
-            display: inline-block;
-            background: var(--secondary);
-            color: white;
-            padding: 3px 10px;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            margin-left: 10px;
-        }
-        
-        /* Projects Section */
-        #projects {
-            background-color: var(--light);
-        }
-        
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-        }
-        
-        .project-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px var(--shadow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px var(--shadow);
-        }
-        
-        .project-content {
             padding: 20px;
-        }
-        
-        .project-content h3 {
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-        
-        .project-content p {
-            color: #666;
             line-height: 1.6;
+            color: #333;
         }
         
-        /* CV Section */
-        .cv-download {
+        header {
             text-align: center;
-            padding: 30px;
+            margin-bottom: 40px;
         }
         
-        .cv-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--primary);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(44, 62, 80, 0.3);
+        header img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 15px;
         }
         
-        .cv-button:hover {
-            background: var(--secondary);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(44, 62, 80, 0.4);
-        }
-        
-        /* Contact Section */
-        #contact {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
-            color: white;
-        }
-        
-        #contact .section-title h2 {
-            color: white;
-        }
-        
-        #contact .section-title h2::after {
-            background: var(--accent);
-        }
-        
-        .contact-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 25px;
-        }
-        
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 15px 25px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        
-        .contact-item:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-3px);
-        }
-        
-        .contact-icon {
-            font-size: 1.5rem;
-            color: var(--accent);
-        }
-        
-        .contact-text a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .contact-text a:hover {
-            color: var(--accent);
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: white;
+        nav {
+            margin-bottom: 30px;
             text-align: center;
-            padding: 30px 0;
         }
         
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-        
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
+        nav a {
+            margin: 0 10px;
             text-decoration: none;
-            transition: all 0.3s ease;
+            color: #0073e6;
         }
         
-        .social-links a:hover {
-            background: var(--secondary);
-            transform: translateY(-3px);
+        h1, h2 {
+            color: #222;
         }
         
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .header-content h1 {
-                font-size: 2.2rem;
-            }
-            
-            .header-content p {
-                font-size: 1.2rem;
-            }
-            
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .nav-links a {
-                padding: 15px;
-            }
-            
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-info {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            section {
-                padding: 60px 0;
-            }
+        section {
+            margin-bottom: 40px;
+        }
+        
+        a {
+            color: #0073e6;
         }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
     <header>
-        <div class="container profile-container">
-            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Al-E-Iba Dahri" class="profile-img">
-            <div class="header-content">
-                <h1>Al-E-Iba Dahri</h1>
-                <!-- <p>Development Economics Researcher</p> -->
-                <div class="university">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>MSc Economics for Development, University of Oxford</span>
-                </div>
-            </div>
-        </div>
+        <!-- Add your picture here later -->
+        <img src="profile.jpg" alt="Aleiba Asad">
+        <h1>Al-E-Iba Dahri</h1>
+        <p>MSc Economics for Development, University of Oxford</p>
     </header>
-
-    <!-- Navigation -->
+    
     <nav>
-        <div class="container nav-container">
-            <ul class="nav-links">
-                <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-                <li><a href="#research"><i class="fas fa-book"></i> Research</a></li>
-                <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
-                <li><a href="#cv"><i class="fas fa-file-alt"></i> CV</a></li>
-                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-            </ul>
-        </div>
+        <a href="#about">About</a> | 
+        <a href="#research">Research</a> | 
+        <a href="#projects">Projects</a> | 
+        <a href="#cv">CV</a> | 
+        <a href="#contact">Contact</a>
     </nav>
-
-    <!-- About Section -->
+    
     <section id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Me</h2>
-            </div>
-            <div class="section-content about-content">
-                <p>I am a development economics professional specializing in quantitative analysis and data-driven policy work across climate, education, health, and gender issues.</p>
-              <!--  <p>My research focuses on understanding how economic policies and interventions can improve outcomes in developing economies, with a particular emphasis on climate adaptation and resilience.</p>
-                <p>I hold a Master of Science in Economics for Development from the University of Oxford, where my dissertation on climate shocks and adaptation in Ethiopia was awarded a Distinction.</p>
-            -->
-            </div>
-        </div>
+        <h2>About</h2>
+        <p>Development economics professional specializing in quantitative analysis and data-driven policy work across climate, education, health, and gender issues.</p>
     </section>
-
-    <!-- Research Section -->
+    
     <section id="research">
-        <div class="container">
-            <div class="section-title">
-                <h2>Research</h2>
-            </div>
-            <div class="section-content">
-                <div class="research-item">
-                    <h3>Climate Shocks, Repeated Exposure and Adaptation: Evidence from Ethiopia <span class="badge">Distinction</span></h3>
-                    <p><strong>University of Oxford Master's Dissertation</strong></p>
-                    <p>This research examined how repeated exposure to climate shocks influences adaptive behaviors among smallholder farmers in Ethiopia. Using panel data and advanced econometric techniques, I found evidence that repeated exposure to droughts increases the likelihood of adopting climate-resilient agricultural practices.</p>
-                </div>
-                
-                <div class="research-item">
-                    <h3>Gender Gaps in Agricultural Productivity: Evidence from Sub-Saharan Africa</h3>
-                    <p><strong>Working Paper</strong></p>
-                    <p>An analysis of the factors contributing to gender gaps in agricultural productivity across multiple African countries, with policy recommendations for addressing these disparities.</p>
-                </div>
-                
-                <div class="research-item">
-                    <h3>Education Outcomes and Economic Shocks: A Longitudinal Study</h3>
-                    <p><strong>Forthcoming</strong></p>
-                    <p>Research investigating how economic shocks affect educational attainment in low-income communities, with implications for social protection policies.</p>
-                </div>
-            </div>
-        </div>
+        <h2>Research</h2>
+        <ul>
+            <li><strong>Master's Dissertation (Oxford):</strong> Climate Shocks, Repeated Exposure and Adaptation: Evidence from Ethiopia (Awarded a Distinction Mark).</li>
+        </ul>
     </section>
-
-    <!-- Projects Section -->
+    
     <section id="projects">
-        <div class="container">
-            <div class="section-title">
-                <h2>Projects</h2>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>Climate Resilience Index</h3>
-                        <p>Development of a composite index to measure climate resilience across developing economies, incorporating environmental, economic, and social factors.</p>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>Education Policy Simulation</h3>
-                        <p>A data-driven simulation model to evaluate the potential impacts of different education policies on long-term economic development.</p>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>Health Economics Dashboard</h3>
-                        <p>An interactive dashboard for visualizing health economics data and evaluating the cost-effectiveness of public health interventions.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h2>Projects</h2>
+        <ul>
+            <!-- Add projects here -->
+        </ul>
     </section>
-
-    <!-- CV Section -->
+    
     <section id="cv">
-        <div class="container">
-            <div class="section-title">
-                <h2>Curriculum Vitae</h2>
-            </div>
-            <div class="cv-download">
-                <a href="AleibaAsad_CV.pdf" class="cv-button" target="_blank">
-                    <i class="fas fa-download"></i> Download Full CV (PDF)
-                </a>
-            </div>
-        </div>
+        <h2>CV</h2>
+        <p><a href="AleibaAsad_CV.pdf" target="_blank">Download my CV (PDF)</a></p>
     </section>
-
-    <!-- Contact Section -->
+    
     <section id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact</h2>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            <a href="mailto:aleiba97@hotmail.com">aleiba97@hotmail.com</a>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-linkedin"></i>
-                        </div>
-                        <div class="contact-text">
-                            <a href="https://linkedin.com/in/adahri" target="_blank">linkedin.com/in/adahri</a>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <span>Oxford, United Kingdom</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:aleiba97@hotmail.com">aleiba97@hotmail.com</a></p>
+        <!-- <p>GitHub: <a href="https://github.com/aleibaad">github.com/aleibad</a></p> -->
+        <p>LinkedIn: <a href="https://linkedin.com/in/adahri">linkedin.com/in/adahri</a></p>
     </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="social-links">
-                <a href="https://linkedin.com/in/adahri" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="mailto:aleiba97@hotmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-            </div>
-            <p>&copy; 2023 Al-E-Iba Dahri. All rights reserved.</p>
-        </div>
-    </footer>
 </body>
 </html>
