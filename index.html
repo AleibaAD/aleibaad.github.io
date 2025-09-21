@@ -4,50 +4,110 @@
   <meta charset="UTF-8">
   <title>Al-E-Iba Dahri</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      max-width: 800px;
+      font-family: 'Roboto', sans-serif;
+      max-width: 900px;
       margin: 0 auto;
       padding: 20px;
       line-height: 1.6;
       color: #333;
+      background: #f4f6f8;
     }
+
     header {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #ddd;
     }
-   header img {
-    width: 150px;        /* adjust width */
-    height: auto;        /* keeps the aspect ratio */
-    margin-bottom: 15px;
+
+    header img {
+      width: 180px;
+      height: auto;
+      margin-bottom: 15px;
+      border-radius: 10px; /* slightly rounded corners */
     }
+
+    h1 {
+      margin: 10px 0 5px 0;
+      font-size: 2.5em;
+      color: #1a1a1a;
+    }
+
+    header p {
+      font-size: 1.1em;
+      color: #555;
+    }
+
     nav {
-      margin-bottom: 30px;
       text-align: center;
+      margin-bottom: 30px;
     }
+
     nav a {
       margin: 0 10px;
       text-decoration: none;
-      color: #0073e6;
+      color: #1a73e8;
+      font-weight: 500;
     }
-    h1, h2 {
-      color: #222;
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #0b59d1;
     }
+
     section {
       margin-bottom: 40px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
+
+    section h2 {
+      color: #222;
+      margin-top: 0;
+    }
+
+    .card {
+      background: #fefefe;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
     a {
-      color: #0073e6;
+      color: #1a73e8;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #1a73e8;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #0b59d1;
     }
   </style>
 </head>
+
 <body>
   <header>
-    <!-- Add your picture here later -->
-    <img src="profile.jpg" alt="Aleiba Asad">
+    <!-- Profile image -->
+    <img src="profile.jpg" alt="Al-E-Iba Dahri">
     <h1>Al-E-Iba Dahri</h1>
-    <p>MSc Economics for Development, University of Oxford</p>
+    <p>Development Economist interested in data-driven, evidence-based policymaking across climate, health, education, and gender.</p>
   </header>
 
   <nav>
@@ -61,34 +121,43 @@
   <section id="about">
     <h2>About</h2>
     <p>
-Development economics professional specializing in quantitative analysis and data-driven policy work across climate, education, health, and gender issues.
+      Development economics professional specializing in quantitative analysis and data-driven policy work across climate, education, health, and gender issues.
     </p>
   </section>
 
   <section id="research">
     <h2>Research</h2>
-    <ul>
-      <li><strong>Master’s Dissertation (Oxford):</strong> Climate Shocks, Repeated Exposure and Adaptation: Evidence from Ethiopia (Awarded a Distinction Mark).</li>
-    </ul>
+    <div class="card">
+      <h3>Master’s Dissertation (Oxford)</h3>
+      <p>Climate Shocks, Repeated Exposure and Adaptation: Evidence from Ethiopia (Awarded a Distinction Mark).</p>
+    </div>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-    <ul>
-    </ul>
+    <div class="card">
+      <h3>Data Analysis for RCTs</h3>
+      <p>Cleaned and analyzed data for Blattman et al. 2014 replication work.</p>
+    </div>
+    <div class="card">
+      <h3>Drought and Poverty Traps</h3>
+      <p>Panel data analysis on Ethiopia's PSNP and household adaptation to repeated droughts.</p>
+    </div>
+    <!-- Add more project cards as needed -->
   </section>
 
   <section id="cv">
     <h2>CV</h2>
-    <p><a href="AleibaAsad_CV.pdf" target="_blank">Download my CV (PDF)</a></p>
+    <p><a class="btn" href="AleibaAsad_CV.pdf" target="_blank">Download my CV (PDF)</a></p>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:aleiba97@hotmail.com">aleiba97@hotmail.com</a></p>
-   <!--  <p>GitHub: <a href="https://github.com/aleibaad">github.com/aleibad</a></p> -->
+    <!-- <p>GitHub: <a href="https://github.com/aleibaad">github.com/aleibad</a></p> -->
     <p>LinkedIn: <a href="https://linkedin.com/in/adahri">linkedin.com/in/adahri</a></p>
   </section>
 </body>
 </html>
+
 
